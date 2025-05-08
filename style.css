@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #07098d;
+    --text-color: #000000;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: Inter, sans-serif;
+	background-color: white;
+	color: black;
+}
+
+/* common styles */
+img {
+    width: 100%;
+}
+
+.description {
+	margin-top: .5rem;
+	font-size: 1rem;
+	font-weight: 300;
+	color: var(--text-color);
+	margin-bottom: 1rem;
+}
+
+.title {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	margin-top: 2rem;
+
+}
+
+.sub {
+	margin-top: 1rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text-color);
+	margin-bottom: 1rem;
+	padding-right: 1rem;
+	
+}
+
+.list {
+	font-size: 1rem;
+	font-weight: 300;
+	color: var(--text-color);
+	margin-top: .2rem;
+	margin-bottom: 1rem;
+	padding-left: 2rem;
+}
+
+.row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: -1rem;
+margin-bottom: -1rem;
+}
+
+
+/* layout */
+
+.container {
+	max-width: 650px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background: whitesmoke;
+	gap: 4rem;
+}
+
+hr {
+	border: 0;
+	height: .1rem;
+	background-color: var(--primary-color);
+	margin-top: .2rem;
+	margin-bottom: .2rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 7rem;
+	}
+}
+
+
+/* profile */
+
+.profile_container {
+	display: flex;
+	gap: 3rem;
+	margin-bottom: 2rem;
+}
+
+.profile_img {
+	max-width: 100px;
+}
+
+.profile_name {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: clamp(1rem,8vw, 1.8rem);
+	text-transform: uppercase;
+	display: block;
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+}
+
+.address {
+	color: var(--text-color);
+	display: block;
+}
+
+table.address a {
+	color: var(--text-color);
+	text-decoration: none;
+	transition: color 0.2s ease, text-decoration 0.2s ease;
+  }
+
+table.address a:hover {
+	color: var(--primary-color);
+	text-decoration: underline;
+  }
